@@ -27,5 +27,8 @@
     <ClCompile Include="arithmetic.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
     </ClCompile>
+    <ClCompile Include="escape.cpp">
+      <Filter>Исходные файлы\tasks\01</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
