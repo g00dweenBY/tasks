@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="arithmetic.cpp" />
+    <ClCompile Include="branching.cpp" />
     <ClCompile Include="escape.cpp" />
     <ClCompile Include="source.cpp" />
   </ItemGroup>
