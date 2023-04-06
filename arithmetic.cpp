@@ -126,4 +126,40 @@
 		cout << meters << " метров будет " << kilometers << " километра " << endl;
 	}
 	-------------------------------------------------------------------------------------------
+
+
+
+
+	double x = getDouble();
+	double y = getDouble();
+	char op = getOperator();
+
+	printResult(x, op, y);
+
+	double getDouble()
+{
+	double x;
+	cout << "¬ведите дес€тичное значение: ";
+	cin >> x;
+	return x;
+}
+
+char getOperator()
+{
+	char op;
+	cout << "¬ведите один из следующих операторов: +, -, * или /: ";
+	cin >> op;
+	return op;
+}
+void printResult(double x, char op, double y)
+{
+	if (op == '+')
+		cout << x << " + " << y << " = " << x + y << endl;
+	else if (op == '-')
+		cout << x << " - " << y << " = " << x - y << endl;
+	else if (op == '*')
+		cout << x << " * " << y << " = " << x * y << endl;
+	else if(op == '/')
+		cout << x << " / " << y << " = " << x / y << endl;
+}
 */
