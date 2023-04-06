@@ -33,5 +33,16 @@
     <ClCompile Include="branching.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
     </ClCompile>
+    <ClCompile Include="add.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="add.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

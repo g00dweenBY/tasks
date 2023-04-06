@@ -1,3 +1,2 @@
 ﻿  source.cpp
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(12,25): warning C4101: result: неиспользованная локальная переменная
   tasks-cpp.vcxproj -> D:\Work\cpp\cpp-study\tasks-cpp\x64\Debug\tasks-cpp.exe
