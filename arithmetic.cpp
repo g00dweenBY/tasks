@@ -196,5 +196,16 @@ int isBitNumber(int x, int pow) {
 	number = isBitNumber(number, 4);
 	number = isBitNumber(number, 2);
 	number = isBitNumber(number, 1);
+
+
+
+		int sm, lg;
+	cout << "Введите число: ";
+	cin >> sm;
+	cout << "Введите больше число: ";
+	cin >> lg;
+
+	cout << "Меньшее значение: " << ((lg > sm) ? sm : lg) << endl;
+	cout << "Большее значение: " << ((lg > sm) ? lg : sm) << endl;
 =================================================
 */
