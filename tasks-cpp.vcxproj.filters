@@ -19,6 +19,9 @@
     <Filter Include="Исходные файлы\tasks\01">
       <UniqueIdentifier>{81762ab1-3440-41c7-94a8-2425767f94ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\tasks\02">
+      <UniqueIdentifier>{f1bc8da0-1a49-499c-a074-3a13a5112fbb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="tower.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>Исходные файлы\tasks\02</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

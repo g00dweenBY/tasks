@@ -132,6 +132,7 @@
     <ClCompile Include="branching.cpp" />
     <ClCompile Include="escape.cpp" />
     <ClCompile Include="source.cpp" />
+    <ClCompile Include="string.cpp" />
     <ClCompile Include="tower.cpp" />
   </ItemGroup>
   <ItemGroup>
