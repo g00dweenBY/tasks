@@ -15,13 +15,7 @@ int main()
 {	
 	setlocale(LC_ALL, "Russian");
 
-	string line, resultLine;
-	while (getline(cin, line))
-	{
-		resultLine += line;
-		cout << "Результирующая строка :" << resultLine ;
-	}
-		
+
 	
 
 

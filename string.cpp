@@ -14,4 +14,13 @@ string lineOne, lineTwo;
 		cout << "Строка : " << lineTwo << " Больше, чем строка: " << lineOne << endl;
 
 
+			string line, resultLine;
+	while (getline(cin, line))
+	{
+		resultLine += line + ' ';
+		cout << "Результирующая строка :" << resultLine << endl;
+	}
+
+
+
 */
