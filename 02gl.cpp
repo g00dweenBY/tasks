@@ -1,25 +1,11 @@
-#include <iostream>
-#include <math.h>
-#include <iomanip>
-#include <cmath>
-#include <string>
-#include "add.h"
-#include "constants.h"
-#include "boo.h"
-#include "doo.h"
-
-
-
-void timer(int hours, int minutes)
+/*
+* 
+* 
+* void timer(int hours, int minutes)
 {
 	cout << "Time: " << hours << ":" << minutes << endl;
 }
-
-string global_str;
-int main()
-{	
-	setlocale(LC_ALL, "Russian");
-	int h, m;
+int h, m;
 	cout << "Введите часы: ";
 	cin >> h;
 	if (h >= 24)
@@ -27,7 +13,7 @@ int main()
 		cout << "Вы ввели некорректное количество часов";
 		return -1;
 	}
-		
+
 
 	cout << "Введите минуты: ";
 	cin >> m;
@@ -37,8 +23,4 @@ int main()
 		return -1;
 	}
 	timer(h, m);
-
-
-	return 0;	
-
-}	
+*/
