@@ -31,4 +31,24 @@
 
 	const double result = static_cast<double>(petrol) / kilometers * 100;
 	cout << "Расход бензина на 100км составляет: " << result << endl;
+
+	=========================================================================
+
+	double kilometers;
+	cout << "Количество километров, которое проехала ваша машина: ";
+	cin >> kilometers;
+	double petrol;
+	cout << "Количество затраченного вашей машиной бензина: ";
+	cin >> petrol;
+
+	const double result = petrol / kilometers * 100;
+	cout << "Расход бензина на 100км составляет: " << result << endl;
+
+	double mills, gallons;
+	mills = kilometers / 1.6;
+	gallons = petrol / 3.875;
+
+	const double resultConvertion = gallons / mills * 62.14;
+
+	cout << "Расход галлонов на 62.14 милль составляет: " << resultConvertion << endl;
 */
