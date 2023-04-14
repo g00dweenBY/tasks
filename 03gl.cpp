@@ -1,21 +1,5 @@
-#include <iostream>
-#include <math.h>
-#include <iomanip>
-#include <cmath>
-#include <string>
-#include "add.h"
-#include "constants.h"
-#include "boo.h"
-#include "doo.h"
+/*
 
-
-
-
-
-string global_str;
-int main()
-{	
-	setlocale(LC_ALL, "Russian");
 	long long seconds;
 	cout << "Введите количество секунд: ";
 	cin >> seconds;
@@ -26,8 +10,4 @@ int main()
 	const int secondsResults = seconds % 60;
 	cout << seconds << " секунд = " << days << " дней, " << hours << " часов, " << minutes << " минут, " << secondsResults << " секунд" << endl;
 
-
-
-	return 0;	
-
-}	
+*/

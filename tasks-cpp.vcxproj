@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="02gl.cpp" />
+    <ClCompile Include="03gl.cpp" />
     <ClCompile Include="add.cpp" />
     <ClCompile Include="arithmetic.cpp" />
     <ClCompile Include="branching.cpp" />

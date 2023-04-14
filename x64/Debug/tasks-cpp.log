@@ -1,2 +1,6 @@
-﻿  source.cpp
+﻿  03gl.cpp
+  source.cpp
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(23,27): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(23,17): warning C4244: инициализация: преобразование "__int64" в "const int", возможна потеря данных
+  Создание кода...
   tasks-cpp.vcxproj -> D:\Work\cpp\cpp-study\tasks-cpp\x64\Debug\tasks-cpp.exe
