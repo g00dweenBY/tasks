@@ -20,4 +20,15 @@
 	const double percentageOfWorld = static_cast<double>(peopleBelarussian) / worldPeoplePopulation * 100;
 
 	cout << "Процентное соотношеие населения Беларуси от всего мира составляет: " << percentageOfWorld << "%" << endl;
+	
+	================================================================================
+	int kilometers;
+	cout << "Количество километров, которое проехала ваша машина: ";
+	cin >> kilometers;
+	int petrol;
+	cout << "Количество затраченного вашей машиной бензина: ";
+	cin >> petrol;
+
+	const double result = static_cast<double>(petrol) / kilometers * 100;
+	cout << "Расход бензина на 100км составляет: " << result << endl;
 */
