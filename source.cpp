@@ -9,44 +9,54 @@
 #include "boo.h"
 #include "doo.h"
 
-struct Advertising
+string global_str;
+
+enum class MonsterType
 {
-	int notification;
-	double percentageOfUsers;
-	double earnings;
+	GOBLIN,
+	ORC,
+	SKELETON,
+	TROLL,
+	OGRE,
 };
 
-void printAdvertising(Advertising advertising)
+struct Monster
 {
-	cout << "ќбъ€влений показано пользовател€м: " << advertising.notification << endl;
-	cout << "ѕроцент посетителей, нажавших на объ€вление: " << advertising.percentageOfUsers << endl;
-	cout << "—редний заработок за каждое нажатие юзера на объ€вление: " << advertising.earnings << endl;
+	MonsterType type;
+	string name;
+	string classes;
+	int health;
+};
 
-	double sumEarning =  (advertising.notification * advertising.percentageOfUsers /100 * advertising.earnings);
-
-	cout << "—колько денег вы заработали за день: " << sumEarning << endl;
+string getMonsterTypeString(Monster monster)
+{
+	if (monster.type == MonsterType::GOBLIN) return "Goblin";
+	if (monster.type == MonsterType::ORC) return "Orc";
+	if (monster.type == MonsterType::SKELETON) return "Skeleton";
+	if (monster.type == MonsterType::TROLL) return "Troll";
+	if (monster.type == MonsterType::OGRE) return "Ogre";
+	return "Unknown";
 }
-
-
-
-string global_str;
+void printMonster(Monster monster)
+{
+	cout << "\nThis " << getMonsterTypeString(monster) <<
+		" your class " << monster.classes <<
+		" is named " << monster.name << " and has "
+		<< monster.health << " health" << endl;
+};
 int main()
 {	
 	setlocale(LC_ALL, "Russian");
-	
-
-
-	Advertising myEarnings;
-
-	cout << "—колько объ€влений вы показали посетител€м: ";
-	cin >> myEarnings.notification;
-	cout << "—колько процентов посетителей нажали на объ€вление: ";
-	cin >> myEarnings.percentageOfUsers;
-	cout << "—колько вы заработали в среднем на каждое объ€вление: ";
-	cin >> myEarnings.earnings;
-
-	printAdvertising(myEarnings);
-	
+	Monster orc = { MonsterType::ORC, "Goodween", "Warrior", 210 };
+	Monster goblin = { MonsterType::GOBLIN, "Treax", "Rogue", 130 };
+	Monster skeleton = { MonsterType::SKELETON, "Adept", "Priest", 120 };
+	Monster troll = { MonsterType::TROLL, "hunterio", "Hunter", 150 };
+	Monster ogre = { MonsterType::OGRE, "Bedum", "Warrior", 240 };
+	printMonster(orc);
+	printMonster(goblin);
+	printMonster(skeleton);
+	printMonster(troll);
+	printMonster(ogre);
 	return 0;	
 
 }	
