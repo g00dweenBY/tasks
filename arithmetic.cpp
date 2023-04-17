@@ -207,5 +207,32 @@ int isBitNumber(int x, int pow) {
 
 	cout << "Меньшее значение: " << ((lg > sm) ? sm : lg) << endl;
 	cout << "Большее значение: " << ((lg > sm) ? lg : sm) << endl;
+
+
+	void calculate(int a, int b, char sign)
+{
+	switch (sign)
+	{
+	case '+':
+		cout << a << " + " <<  b  << " = " << a + b << endl;
+		break;
+	case '-':
+		cout << a << " - " << b <<  " = " << a - b << endl;
+		break;
+	case '*':
+		cout << a << " * " << b << " = " << a * b << endl;
+		break;
+	case '/':
+		cout << a << " / " << b << " = " << a / b << endl;
+		break;
+	case '%':
+		cout << a << " % " << b << " = " << a % b << endl;
+		break;
+	default:
+		cout << "Вы ввели некорректный знак";
+		break;
+	}
+}
+calculate(5, 4, '-');
 =================================================
 */
