@@ -30,12 +30,22 @@ struct Monster
 
 string getMonsterTypeString(Monster monster)
 {
-	if (monster.type == MonsterType::GOBLIN) return "Goblin";
-	if (monster.type == MonsterType::ORC) return "Orc";
-	if (monster.type == MonsterType::SKELETON) return "Skeleton";
-	if (monster.type == MonsterType::TROLL) return "Troll";
-	if (monster.type == MonsterType::OGRE) return "Ogre";
-	return "Unknown";
+	switch (monster.type)
+	{
+	case MonsterType::GOBLIN:
+		return "Goblin";
+	case MonsterType::ORC:
+		return "Orc";
+	case MonsterType::SKELETON:
+		return "Skeleton";
+	case MonsterType::TROLL:
+		return "Troll";
+	case MonsterType::OGRE:
+		return "Ogre";		
+	default:
+		return "Unknown";
+	}
+	
 }
 void printMonster(Monster monster)
 {
