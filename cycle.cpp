@@ -17,4 +17,22 @@ char myChar = 'a';
         --outer;
     }
 
+
+	int outer = 1;
+	while (outer <= 5)
+	{
+		int inner = 5;
+		while (inner >= 1)
+		{
+			if (inner <= outer)
+				cout << inner << " ";
+			else
+				cout << "  ";
+			--inner;
+		}
+
+		cout << "\n";
+		++outer;
+	}
+
 */
