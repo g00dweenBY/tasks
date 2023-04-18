@@ -54,6 +54,9 @@
     <ClCompile Include="03gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
     </ClCompile>
+    <ClCompile Include="cycle.cpp">
+      <Filter>Исходные файлы\tasks\02</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
