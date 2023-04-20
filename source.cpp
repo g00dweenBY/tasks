@@ -32,8 +32,10 @@ int main()
 		int smallIndex = i;
 		for (int currentIndex = i + 1; currentIndex < length; ++currentIndex)
 		{
-			if (array[currentIndex] < array[smallIndex])
+			if (array[currentIndex] > array[smallIndex])
+			{
 				smallIndex = currentIndex;
+			}
 		}
 		swap(array[i], array[smallIndex]);
 	}
@@ -47,20 +49,7 @@ int main()
 
 
 
-	/*
-	* for (int i = 0; i < length - 1; ++i)
-	{
-		int smallestIndex = i;
-		for (int currentIndex = i + 1; currentIndex < length; ++currentIndex)
-		{
-			if (array[currentIndex] < array[smallestIndex])
-				smallestIndex = currentIndex;
-			++count;
-		}
-		swap(array[i], array[smallestIndex]);
-	}
 	
-	*/
 
 
 

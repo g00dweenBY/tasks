@@ -28,6 +28,9 @@
     <Filter Include="Исходные файлы\tasks\03">
       <UniqueIdentifier>{f8a8ce4e-2ab1-455f-80d3-be8828f110a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\tasks\algorithms">
+      <UniqueIdentifier>{e87026f0-1a70-49ab-8e58-3792c7add66a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="game-hi-lo.cpp">
       <Filter>Исходные файлы\tasks\03</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms.cpp">
+      <Filter>Исходные файлы\tasks\algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
