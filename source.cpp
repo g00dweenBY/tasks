@@ -20,31 +20,31 @@ int main()
 {	
 	setlocale(LC_ALL, "Russian");
    
-	const int length = 5;
-	int array[length] = { 30, 50, 20, 10, 40 };
+	const int length(9);
+	int array[length] = { 7, 5, 6, 4, 9, 8, 2, 1, 3 };
 	int count = 0;
+
 
 
 
 
 	for (int i = 0; i < length - 1; ++i)
 	{
-		int smallIndex = i;
-		for (int currentIndex = i + 1; currentIndex < length; ++currentIndex)
+		for (int currentIndex = 0; currentIndex < length - 1; ++currentIndex)
 		{
-			if (array[currentIndex] > array[smallIndex])
+			if (array[currentIndex] > array[currentIndex + 1])
 			{
-				smallIndex = currentIndex;
+				swap(array[currentIndex], array[currentIndex + 1]);
 			}
+			++count;
 		}
-		swap(array[i], array[smallIndex]);
 	}
 
 
 	for (int i = 0; i < length; ++i)
 		cout << "value array = " << array[i] << endl;
-	cout << "Count = " << count << endl;
 
+	cout << "cout = " << count << endl;
 
 
 
