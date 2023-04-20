@@ -54,6 +54,20 @@ for (int i = 0; i < length - 1; ++i)
 		}
 	}
 
+	-------------------
+	Сортировка пузырьком от большего к меньшему
+	for (int i = 0; i < length - 1; ++i)
+	{
+		for (int currentIndex = 0; currentIndex < length - 1; ++currentIndex)
+		{
+			if (array[currentIndex] < array[currentIndex + 1])
+			{
+				swap(array[currentIndex], array[currentIndex + 1]);
+			}
+			++count;
+		}
+	}
+
 ============================================================================================
 
 */

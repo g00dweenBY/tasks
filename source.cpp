@@ -32,7 +32,7 @@ int main()
 	{
 		for (int currentIndex = 0; currentIndex < length - 1; ++currentIndex)
 		{
-			if (array[currentIndex] > array[currentIndex + 1])
+			if (array[currentIndex] < array[currentIndex + 1])
 			{
 				swap(array[currentIndex], array[currentIndex + 1]);
 			}
