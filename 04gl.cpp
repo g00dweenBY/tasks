@@ -123,4 +123,14 @@ Pizza *pizza = new Pizza[3];
 	cout << "Вас зовут: " << fullName <<
 		"\nваш любиый десерт: " << dessert << endl;
 
+
+	CandyBar *candy = new CandyBar[3];
+	candy[0] = { "Ассорти", 2.4, 5550 };
+	candy[1] = { "Трюффель", 3.8, 7450 };
+	candy[2] = { "Герцог", 6.8, 12500 };
+
+	cout << candy[0].name << " " << candy[0].weight << " " << candy[0].calories << endl;
+	cout << candy[1].name << " " << candy[1].weight << " " << candy[1].calories << endl;
+	cout << candy[2].name << " " << candy[2].weight << " " << candy[2].calories << endl;
+
 */

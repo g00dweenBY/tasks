@@ -69,6 +69,9 @@
     <ClCompile Include="algorithms.cpp">
       <Filter>Исходные файлы\tasks\algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="04gl.cpp">
+      <Filter>Исходные файлы\tasks\book-prata</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">

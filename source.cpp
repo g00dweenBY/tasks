@@ -31,6 +31,7 @@ int main()
 	
 	
 
+
 	/*
 	array<long double, 64> dipsea;
 	char actor[30];
