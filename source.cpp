@@ -24,32 +24,19 @@ struct  CandyBar
 };
 
 int main()
-{	
+{
 	setlocale(LC_ALL, "Russian");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-	
-	
 
+	const int arrSize = 16;
+	long long factorials[arrSize];
+	factorials[1] = factorials[0] = 1LL;
 
-	/*
-	array<long double, 64> dipsea;
-	char actor[30];
-	short betsie[100];
-	float chuck[13];
-	long double dipsea[64];
+	for (int i = 2; i < arrSize; i++)
+		factorials[i] = i * factorials[i - 1];
+	for (int i = 0; i < arrSize; i++)
+		cout << i << "! = " << factorials[i] << endl;
 
-	array<char, 30> actor;
-	array<short, 100> betsie;
-	array<float, 13> chuck;
-	
-
-	*/
-	
-
-	
-	
-
-	return 0;	
-
-}	
+	return 0;
+}
