@@ -133,4 +133,23 @@ Pizza *pizza = new Pizza[3];
 	cout << candy[1].name << " " << candy[1].weight << " " << candy[1].calories << endl;
 	cout << candy[2].name << " " << candy[2].weight << " " << candy[2].calories << endl;
 
+
+
+	double result[3];
+	cout << "First result: ";
+	cin >> result[0];
+	cin.clear();
+
+	cout << "Second result: ";
+	cin >> result[1];
+	cin.clear();
+
+	cout << "Thirty result: ";
+	cin >> result[2];
+
+	int length = sizeof(result) / sizeof(result[0]);
+	double average = (result[0] + result[1] + result[2]) / length;
+
+	cout << "Среднее значение : " << average << endl;
+
 */
