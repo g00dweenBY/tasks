@@ -28,15 +28,22 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
+	int sum = 0;
+	cout << "¬ведите первое целочисленное значение: ";
+	int firstNumber;
+	cin >> firstNumber;
+	cin.clear();
+	cout << "¬ведите второе (меньшее первого) целочисленное значение: ";
+	int secondNumber;
+	cin >> secondNumber;
+	for (firstNumber; firstNumber <= secondNumber; firstNumber++)
+	{
+		sum += firstNumber;
+	}
 
-	const int arrSize = 16;
-	long long factorials[arrSize];
-	factorials[1] = factorials[0] = 1LL;
+	cout << "—умма равна: " << sum << endl;
 
-	for (int i = 2; i < arrSize; i++)
-		factorials[i] = i * factorials[i - 1];
-	for (int i = 0; i < arrSize; i++)
-		cout << i << "! = " << factorials[i] << endl;
+
 
 	return 0;
 }
