@@ -26,6 +26,17 @@ int sum = 0;
 		cout << i << "! = " << factorials[i] << endl;
 
 
+		int number;
+	int sum = 0;
+	do
+	{
+		cout << "¬ведите число: ";
+		cin >> number;
+		sum += number;
+	} while (number != 0);
+	cout << "—умма введенных числа равна: " << sum << endl;
+
+
 ============================================================================
 
 */
