@@ -28,21 +28,6 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-	
-	
-
-	/*
-	 do
-	{
-		years++;
-		cout << "Количество лет: " << years
-
-	} while (daffnaBank > kleoBank);
-	 
-	*/
-	
-
-
 
 	return 0;
 }
