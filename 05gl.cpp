@@ -37,6 +37,25 @@ int sum = 0;
 	cout << "Сумма введенных числа равна: " << sum << endl;
 
 
+	double daffnaBank = 100;
+	double daffnaBankCurrence = daffnaBank - daffnaBank * 0.9;
+	double kleoBank = 100;
+
+
+	int years = 0;
+
+	do
+	{
+		years++;
+		cout << "\tКоличество лет: " << years << endl;
+		double kleoBankCurrence = kleoBank - kleoBank * 0.95;
+		kleoBank += kleoBankCurrence;
+		daffnaBank += daffnaBankCurrence;
+		cout << "kleoBank: " << kleoBank << "\n daffnaBank: " << daffnaBank << endl;
+		if (daffnaBank < kleoBank)
+			cout << "Для того, что бы сумма заложенная под сложные 5% обогнала сумму Даффны, ему понадобилось: " << years << "лет";
+	} while (daffnaBank > kleoBank);
+
 ============================================================================
 
 */

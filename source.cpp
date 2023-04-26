@@ -31,6 +31,17 @@ int main()
 	
 	
 
+	/*
+	 do
+	{
+		years++;
+		cout << "Количество лет: " << years
+
+	} while (daffnaBank > kleoBank);
+	 
+	*/
+	
+
 
 
 	return 0;
