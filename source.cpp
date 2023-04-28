@@ -29,6 +29,21 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	
+	int size = 20;
+	char answer[20];
+	int count = 0;
+
+	cout << "Вводите слова (для завершения, необходимо ввести \"done\")\n";
+	cin >> answer;
+
+
+	while (strcmp(answer, "done"))
+	{
+		cin >> answer;
+		++count;
+	}
+
+	cout << "Вы ввели " << count << " слов";
 	
 	return 0;
 }
