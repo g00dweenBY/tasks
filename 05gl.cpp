@@ -125,4 +125,33 @@ array<string, 12> months = { "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь
 	cout << "Итоговая сумма за 3 года составила: " << fullSum << endl;
 ============================================================================
 
+
+============================================================================
+struct Car
+	{
+		string name;
+		int yearOfRelease;
+	};
+	cout << "Сколько автомобилей поместить в каталог? ";
+	int cars;
+	cin >> cars;
+	cin.ignore();
+	Car* arrCars = new Car[cars];
+
+	for (int i = 0; i < cars; i++)
+	{
+		cout << "Автомобиль #:" << i + 1 << "\n";
+		cout << "Введите производителя: ";
+		getline(cin, arrCars[i].name);
+		cout << "Введите год выпуска: ";
+		cin >> arrCars[i].yearOfRelease;
+		cin.ignore();
+	}
+	cout << "Вот ваша коллекция:" << endl;
+	for (int i = 0; i < cars; i++)
+	{
+		cout << arrCars[i].name << " " << arrCars[i].yearOfRelease << "\n";
+	}
+============================================================================
+
 */

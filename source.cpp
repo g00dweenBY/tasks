@@ -28,22 +28,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-
 	
-	array<array<int, 12>, 3> sells = { {
-		{11,55,24,32,56,76,89,54,23,24,77,11},
-		{12,24,23,26,1,3,3,5,7,8,9,1},
-	} };
-	int fullSum = 0;
-	cout << sells.size();
-
-	for (int i = 0; i < sells.size(); i++)
-	{
-		for (int j = 0; j < sells[i].size(); j++)
-		{
-			fullSum += sells[i][j];
-		}		
-	}
-	cout << "Итоговая сумма за 3 года составила: " << fullSum << endl;
+	
 	return 0;
 }
