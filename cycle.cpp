@@ -133,5 +133,23 @@ void printResult(double a, char sm, double b)
 
     std::cout << "The best score was " << maxScore << " has index " << index << '\n';
 
+
+    const int number = 44;
+    int answer;
+
+    cout << "Пожалуйста, введите число в диапазоне от 1 до 100: ";
+    do
+    {
+        cin >> answer;
+        if (answer < number)
+            cout << "Too low ---gues again: ";
+        else if (answer > number)
+            cout << "Too high --gues again: ";
+        else
+            cout << "Поздравляю, число которое необходимо было отгадать, являлось = " << number << endl;
+
+
+    } while (answer != number);
+
 	===============================================================================================
 */

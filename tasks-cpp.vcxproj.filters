@@ -31,6 +31,9 @@
     <Filter Include="Исходные файлы\tasks\algorithms">
       <UniqueIdentifier>{e87026f0-1a70-49ab-8e58-3792c7add66a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\tasks\book-prata\hard-for-me">
+      <UniqueIdentifier>{174a5e75-0ec7-49fb-be25-d1d4e03e8f39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp">
@@ -74,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="05gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
+    </ClCompile>
+    <ClCompile Include="hard.cpp">
+      <Filter>Исходные файлы\tasks\book-prata\hard-for-me</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

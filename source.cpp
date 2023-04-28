@@ -29,7 +29,22 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	
-	
+	const int number = 44;
+	int answer;
+
+	cout << "Пожалуйста, введите число в диапазоне от 1 до 100: ";
+	do
+	{
+		cin >> answer;
+		if (answer < number)
+			cout << "Too low ---gues again: ";
+		else if (answer > number)
+			cout << "Too high --gues again: ";
+		else
+			cout << "Поздравляю, число которое необходимо было отгадать, являлось = " << number << endl;
+
+
+	} while (answer != number);
 	
 	return 0;
 }
