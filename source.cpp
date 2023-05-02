@@ -37,10 +37,11 @@ int main()
 	int count = 0;
 	for (int i = 0; i < length; ++i)
 	{	
-		cout << "¬ведите значение с плавающей точкой: ";
+		
 		
 		do
 		{
+			cout << "¬ведите " << length - i << " значений с плавающей точкой : ";
 			cin >> arr[i];
 
 			if (cin.fail())
