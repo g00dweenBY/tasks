@@ -19,21 +19,13 @@
 
 string global_str;
 
-
-
-struct  CandyBar
-{
-	string name;
-	double weight;
-	int calories;
-};
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	
+
 	
 
 	/*
