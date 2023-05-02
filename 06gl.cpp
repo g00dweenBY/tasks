@@ -17,27 +17,23 @@ cout << "Введите пожалуйста строку: ";
 	}
 
 	=====================================================================================
-	array<double, 5> arr;
-	double sum = 0;
-	int length = sizeof(arr) / sizeof(arr[0]);
-	int count = 0;
-	for (int i = 0; i < length; ++i)
-	{
-			cout << "Введите " << length - i << " значений с плавающей точкой : ";
+	for (int i = 0; i < length;)
+	{	
+		cout << "Введите " << length - i << " значений с плавающей точкой : ";
+		cin >> arr[i];
 
-		do
+		if (cin.fail())
 		{
-			cin >> arr[i];
-
-			if (cin.fail())
-			{
-				cout << "Некорректный ввод. Попробутйе ещё раз." << endl;
-				cin.clear();
-				cin.ignore(10000, '\n');
-			}
-		} while (cin.fail());
-		cout << "Элеменет массива с индексом: " << i << " = " << arr[i] << endl;
-		sum += arr[i];
+			cout << "Некорректный ввод. Попробуйте ещё раз" << endl;
+			cin.clear();
+			cin.ignore(10000, '\n');
+		}
+		else
+		{
+			cout << "Элемент с индексом " << i << " = " << arr[i] << endl;
+			sum += arr[i];
+			++i;
+		}
 	}
 	double average = sum / length;
 	cout << "Сумма равна: " << sum << endl;
@@ -50,7 +46,7 @@ cout << "Введите пожалуйста строку: ";
 		{
 			cout << arr[i] << " ";
 			++count;
-		}
+		}	
 	}
 	cout << "\nКоличество значения превышающих среднее: " << count << endl;
 

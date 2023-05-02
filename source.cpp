@@ -35,24 +35,25 @@ int main()
 	double sum = 0;
 	int length = sizeof(arr) / sizeof(arr[0]);
 	int count = 0;
-	for (int i = 0; i < length; ++i)
-	{	
-		
-		
-		do
-		{
-			cout << "Введите " << length - i << " значений с плавающей точкой : ";
-			cin >> arr[i];
 
-			if (cin.fail())
-			{
-				cout << "Некорректный ввод. Попробутйе ещё раз." << endl;
-				cin.clear();
-				cin.ignore(10000, '\n');
-			}
-		} while (cin.fail());
-		cout << "Элеменет массива с индексом: " << i << " = " << arr[i] << endl;
-		sum += arr[i];
+
+	for (int i = 0; i < length;)
+	{	
+		cout << "Введите " << length - i << " значений с плавающей точкой : ";
+		cin >> arr[i];
+
+		if (cin.fail())
+		{
+			cout << "Некорректный ввод. Попробуйте ещё раз" << endl;
+			cin.clear();
+			cin.ignore(10000, '\n');
+		}
+		else
+		{
+			cout << "Элемент с индексом " << i << " = " << arr[i] << endl;
+			sum += arr[i];
+			++i;
+		}
 	}
 	double average = sum / length;
 	cout << "Сумма равна: " << sum << endl;
