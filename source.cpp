@@ -19,6 +19,8 @@
 
 string global_str;
 
+
+
 struct  CandyBar
 {
 	string name;
@@ -31,44 +33,9 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-	array<double, 5> arr;
-	double sum = 0;
-	int length = sizeof(arr) / sizeof(arr[0]);
-	int count = 0;
+	
+	
 
-
-	for (int i = 0; i < length;)
-	{	
-		cout << "Введите " << length - i << " значений с плавающей точкой : ";
-		cin >> arr[i];
-
-		if (cin.fail())
-		{
-			cout << "Некорректный ввод. Попробуйте ещё раз" << endl;
-			cin.clear();
-			cin.ignore(10000, '\n');
-		}
-		else
-		{
-			cout << "Элемент с индексом " << i << " = " << arr[i] << endl;
-			sum += arr[i];
-			++i;
-		}
-	}
-	double average = sum / length;
-	cout << "Сумма равна: " << sum << endl;
-	cout << "Среднее значение элементов: " << average << endl;
-
-	cout << "Значения, которые больше среднего значения по массиву: ";
-	for (int i = 0; i < length; ++i)
-	{
-		if (arr[i] > average)
-		{
-			cout << arr[i] << " ";
-			++count;
-		}	
-	}
-	cout << "\nКоличество значения превышающих среднее: " << count << endl;
 	/*
 	char automobile[50];
 	int year;
