@@ -81,6 +81,9 @@
     <ClCompile Include="hard.cpp">
       <Filter>Исходные файлы\tasks\book-prata\hard-for-me</Filter>
     </ClCompile>
+    <ClCompile Include="06gl.cpp">
+      <Filter>Исходные файлы\tasks\book-prata</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">

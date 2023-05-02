@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="06gl.cpp" />
     <ClCompile Include="hard.cpp" />
     <ClCompile Include="02gl.cpp" />
     <ClCompile Include="03gl.cpp" />
