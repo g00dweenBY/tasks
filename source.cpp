@@ -26,18 +26,7 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 
-	const int SIZE = 12;
-	char vow[SIZE] = { 'a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y' };
-
-	int vowels = 0;
-	int constants = 0;
-	int others = 0;
-	bool isvowel = false;
-	cout << "Enter words, (q to quit):\n";
-	string word;
-
 	
-
 	/*
 	char automobile[50];
 	int year;

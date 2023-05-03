@@ -268,5 +268,26 @@ void showMenuPreference()
 	}
 	if (!numberLessFlag)
 		cout << "none" << endl;
+
+
+
+		ifstream inFile;
+
+	inFile.open("carinfo.txt");
+	char ch;
+	int count = 0;
+	if (!inFile.is_open())
+	{
+		cout << "error" << endl;
+		exit(EXIT_FAILURE);
+	}
+	while (inFile.get(ch))
+	{
+		++count;
+	}
+
+	cout << "Количество символов в файле: " << count << endl;
+
+	inFile.close();
 	=====================================================================================
 */
