@@ -184,4 +184,39 @@ void showMenuPreference()
 	cout << "Bye" << endl;
 
 	=====================================================================================
+
+	=====================================================================================
+	double price;
+
+	cout << "¬ведите число большее нул€: ";
+	cin >> price;
+	while (!(price <= 0))
+	{
+		double totalPrice = 0;
+		double priceX10;
+		double priceX15;
+		double priceX20;
+		if (price >= 10000)
+		{
+			priceX10 = price * 0.1;
+			totalPrice += priceX10;
+
+		}
+		if (price >= 20000)
+		{
+			priceX15 = price * 0.15;
+			totalPrice += priceX15;
+
+		}
+		if (price >= 35000)
+		{
+			priceX20 = price * 0.2;
+			totalPrice += priceX20;
+		}
+
+		cout << "Your correct price = " << totalPrice + price << endl;
+		cin >> price;
+	}
+	cout << "Bye";
+	=====================================================================================
 */

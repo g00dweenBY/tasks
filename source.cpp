@@ -15,8 +15,6 @@
 #include "boo.h"
 #include "doo.h"
 
-
-
 string global_str;
 
 int main()
@@ -25,7 +23,7 @@ int main()
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	
-
+	
 	
 
 	/*
