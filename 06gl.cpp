@@ -219,4 +219,54 @@ void showMenuPreference()
 	}
 	cout << "Bye";
 	=====================================================================================
+
+	=====================================================================================
+	struct Patrons
+{
+	string name;
+	double donation;
+};
+
+	int quantityPatrons;
+	bool numberMoreFlag = false;
+	bool numberLessFlag = false;
+	cout << "Введите количество людей, поддержащих проект: ";
+	cin >> quantityPatrons;
+
+	Patrons* patrons = new Patrons[quantityPatrons];
+
+	cout << "Количество людей, поддержащих проект = " << quantityPatrons << endl;
+
+	for (int i = 0; i < quantityPatrons; ++i)
+	{
+		cout << "Введите имя пожертвовавшего #" << i + 1 << " ";
+		cin >> patrons[i].name;
+		cout << "Сумма пожертвоаний: ";
+		cin >> patrons[i].donation;
+	}
+	cout << "Grand patrons: ";
+	for (int i = 0; i < quantityPatrons; ++i)
+	{
+		if (patrons[i].donation > 10000)
+		{
+			cout << "\n " << patrons[i].name << " his donation = $" << patrons[i].donation;
+			numberMoreFlag = true;
+		}
+		if (!numberMoreFlag)
+			cout << "none" << endl;
+	}
+	cout << "\nPatrons: ";
+	for (int i = 0; i < quantityPatrons; ++i)
+	{
+
+		if (patrons[i].donation < 10000)
+		{
+			cout << "\n " << patrons[i].name << " his donation = $" << patrons[i].donation;
+			numberLessFlag = true;
+		}
+
+	}
+	if (!numberLessFlag)
+		cout << "none" << endl;
+	=====================================================================================
 */
