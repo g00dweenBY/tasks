@@ -22,4 +22,30 @@ int numberStrings;
 	}
 
 
+
+	while (cin >> word && word != "q")
+	{
+		if (isalpha(word[0]))
+		{
+			for (int i = 0; i < SIZE; ++i)
+			{
+				if (word[0] == vow[1])
+					isvowel = true;
+			}
+			if (isvowel)
+				++vowels;
+			else
+				++constants;
+		}
+		else
+		{
+			++others;
+		}
+		isvowel = false;
+	}
+
+	cout << vowels << " words beginning with vowels." << endl;
+	cout << constants << " words beginning with consonants." << endl;
+	cout << others << " others." << endl;
+
 */
