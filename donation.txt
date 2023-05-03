@@ -1,0 +1,12 @@
+#1
+Name: Goodween
+His donation: 15000
+#2
+Name: Treax
+His donation: 12000
+#3
+Name: Gundalini
+His donation: 48000
+#4
+Name: Abed
+His donation: 5000

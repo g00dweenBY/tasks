@@ -270,6 +270,8 @@ void showMenuPreference()
 		cout << "none" << endl;
 
 
+			=====================================================================================
+	=====================================================================================
 
 		ifstream inFile;
 
@@ -290,4 +292,66 @@ void showMenuPreference()
 
 	inFile.close();
 	=====================================================================================
+
+	=====================================================================================
+
+	struct Patrons
+{
+	string name;
+	double donation;
+};
+
+	ofstream outFile;
+	ofstream fout;
+	outFile.open("donation.txt");
+	int quantityPatrons;
+	bool numberMoreFlag = false;
+	bool numberLessFlag = false;
+	cout << "Введите количество людей, поддержащих проект: ";
+	cin >> quantityPatrons;
+
+	Patrons* patrons = new Patrons[quantityPatrons];
+
+	cout << "Количество людей, поддержащих проект = " << quantityPatrons << endl;
+
+	for (int i = 0; i < quantityPatrons; ++i)
+	{
+		cout << "Введите имя пожертвовавшего #" << i + 1 << " ";
+		cin >> patrons[i].name;
+		cout << "Сумма пожертвоаний: ";
+		cin >> patrons[i].donation;
+
+		outFile << "#" << i + 1 << endl;
+		outFile << "Name: " << patrons[i].name << endl;
+		outFile << "His donation: " << patrons[i].donation << endl;
+	}
+	cout << "Grand patrons: ";
+	for (int i = 0; i < quantityPatrons; ++i)
+	{
+		if (patrons[i].donation > 10000)
+		{
+			cout << "\n " << patrons[i].name << " his donation = $" << patrons[i].donation;
+			numberMoreFlag = true;
+		}
+		if (!numberMoreFlag)
+			cout << "none" << endl;
+	}
+	cout << "\nPatrons: ";
+	for (int i = 0; i < quantityPatrons; ++i)
+	{
+
+		if (patrons[i].donation < 10000)
+		{
+			cout << "\n " << patrons[i].name << " his donation = $" << patrons[i].donation;
+			numberLessFlag = true;
+		}
+
+	}
+	if (!numberLessFlag)
+		cout << "none" << endl;
+
+	outFile.close();
+
+	=====================================================================================
+	
 */
