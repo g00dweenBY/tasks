@@ -34,6 +34,9 @@
     <Filter Include="Исходные файлы\tasks\book-prata\hard-for-me">
       <UniqueIdentifier>{174a5e75-0ec7-49fb-be25-d1d4e03e8f39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\iostream">
+      <UniqueIdentifier>{aa8a9555-674f-4140-a9b1-5970c436ba23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source.cpp">
@@ -57,10 +60,10 @@
     <ClCompile Include="string.cpp">
       <Filter>Исходные файлы\tasks\02</Filter>
     </ClCompile>
-    <ClCompile Include="02gl.cpp">
+    <ClCompile Include="tasks\book-prata\02gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
     </ClCompile>
-    <ClCompile Include="03gl.cpp">
+    <ClCompile Include="tasks\book-prata\03gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
     </ClCompile>
     <ClCompile Include="cycle.cpp">
@@ -72,17 +75,23 @@
     <ClCompile Include="algorithms.cpp">
       <Filter>Исходные файлы\tasks\algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="04gl.cpp">
+    <ClCompile Include="tasks\book-prata\04gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
     </ClCompile>
-    <ClCompile Include="05gl.cpp">
+    <ClCompile Include="tasks\book-prata\05gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
     </ClCompile>
     <ClCompile Include="hard.cpp">
       <Filter>Исходные файлы\tasks\book-prata\hard-for-me</Filter>
     </ClCompile>
-    <ClCompile Include="06gl.cpp">
+    <ClCompile Include="tasks\book-prata\06gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
+    </ClCompile>
+    <ClCompile Include="iostream.cpp">
+      <Filter>Исходные файлы\iostream</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
