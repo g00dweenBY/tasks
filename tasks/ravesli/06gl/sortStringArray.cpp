@@ -1,3 +1,5 @@
+/*
+
 #include <iostream>
 #include <Windows.h>
 #include <string>
@@ -60,3 +62,5 @@ int main()
 	return 0;
 }
 
+
+*/

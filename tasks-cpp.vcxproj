@@ -140,17 +140,17 @@
     <ClCompile Include="tasks\book-prata\04gl.cpp" />
     <ClCompile Include="tasks\book-prata\05gl.cpp" />
     <ClCompile Include="add.cpp" />
-    <ClCompile Include="algorithms.cpp" />
-    <ClCompile Include="arithmetic.cpp" />
-    <ClCompile Include="branching.cpp" />
-    <ClCompile Include="cycle.cpp" />
-    <ClCompile Include="escape.cpp" />
-    <ClCompile Include="game-hi-lo.cpp" />
+    <ClCompile Include="tasks\general\algorithms.cpp" />
+    <ClCompile Include="tasks\general\arithmetic.cpp" />
+    <ClCompile Include="tasks\book-prata\branching.cpp" />
+    <ClCompile Include="tasks\ravesli\cycle.cpp" />
+    <ClCompile Include="tasks\ravesli\escape.cpp" />
+    <ClCompile Include="tasks\ravesli\game-hi-lo.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="iostream.cpp" />
     <ClCompile Include="source.cpp" />
-    <ClCompile Include="string.cpp" />
-    <ClCompile Include="tower.cpp" />
+    <ClCompile Include="tasks\general\string.cpp" />
+    <ClCompile Include="tasks\ravesli\tower.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />

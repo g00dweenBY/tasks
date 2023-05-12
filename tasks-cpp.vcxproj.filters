@@ -42,22 +42,22 @@
     <ClCompile Include="source.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="arithmetic.cpp">
+    <ClCompile Include="tasks\general\arithmetic.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
     </ClCompile>
-    <ClCompile Include="escape.cpp">
+    <ClCompile Include="tasks\ravesli\escape.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
     </ClCompile>
-    <ClCompile Include="branching.cpp">
+    <ClCompile Include="tasks\book-prata\branching.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
     </ClCompile>
     <ClCompile Include="add.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="tower.cpp">
+    <ClCompile Include="tasks\ravesli\tower.cpp">
       <Filter>Исходные файлы\tasks\01</Filter>
     </ClCompile>
-    <ClCompile Include="string.cpp">
+    <ClCompile Include="tasks\general\string.cpp">
       <Filter>Исходные файлы\tasks\02</Filter>
     </ClCompile>
     <ClCompile Include="tasks\book-prata\02gl.cpp">
@@ -66,13 +66,13 @@
     <ClCompile Include="tasks\book-prata\03gl.cpp">
       <Filter>Исходные файлы\tasks\book-prata</Filter>
     </ClCompile>
-    <ClCompile Include="cycle.cpp">
+    <ClCompile Include="tasks\ravesli\cycle.cpp">
       <Filter>Исходные файлы\tasks\02</Filter>
     </ClCompile>
-    <ClCompile Include="game-hi-lo.cpp">
+    <ClCompile Include="tasks\ravesli\game-hi-lo.cpp">
       <Filter>Исходные файлы\tasks\03</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms.cpp">
+    <ClCompile Include="tasks\general\algorithms.cpp">
       <Filter>Исходные файлы\tasks\algorithms</Filter>
     </ClCompile>
     <ClCompile Include="tasks\book-prata\04gl.cpp">
