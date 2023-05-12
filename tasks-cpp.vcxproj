@@ -143,6 +143,7 @@
     <ClCompile Include="tasks\general\algorithms.cpp" />
     <ClCompile Include="tasks\general\arithmetic.cpp" />
     <ClCompile Include="tasks\book-prata\branching.cpp" />
+    <ClCompile Include="tasks\ravesli\06gl\sortStringArray.cpp" />
     <ClCompile Include="tasks\ravesli\cycle.cpp" />
     <ClCompile Include="tasks\ravesli\escape.cpp" />
     <ClCompile Include="tasks\ravesli\game-hi-lo.cpp" />
