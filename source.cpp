@@ -72,6 +72,16 @@ void printCard(const Card& card)
 
 }
 
+void printDeck(std::array<Card, 52>& deck)
+{
+	for (const auto& card : deck)
+	{
+		printCard(card);
+		std::cout << " ";
+	}
+	std::cout << '\n';
+}
+
 
 
 int main()
@@ -80,7 +90,17 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	
+	std::array<Card, 52> deck;
+	int card = 0;
+
+	for(int suit = 0; suit < MAX_SUITS; ++suit)
+	for (int type = 0; type < MAX_TYPES; ++type)
+	{
+		deck[card].suit = static_cast<CardSuits>(suit);
+		deck[card].type = static_cast<CardTypes>(type);
+		++card;
+	}
+
 	return 0;
 }
 
