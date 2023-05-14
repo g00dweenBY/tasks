@@ -82,6 +82,13 @@ void printDeck(std::array<Card, 52>& deck)
 	std::cout << '\n';
 }
 
+void swapCard(Card &cardOne, Card &CardTwo)
+{
+	Card cardTemp = cardOne;
+	cardOne = CardTwo;
+	CardTwo = cardTemp;
+}
+
 
 
 int main()
