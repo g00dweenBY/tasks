@@ -15,4 +15,13 @@
 	else if(b >= c && c >= a)
 		std::cout << b << "," << c << "," << a << std::endl;
 
+
+	std::cout << "Enter a number: ";
+	int num;
+	std::cin >> num;
+	if (num % 2 == 0)
+		std::cout << "Number " << num << " is even" << std::endl;
+	else
+		std::cout << "NUmber " << num << " is add" << std::endl;
+
 */
