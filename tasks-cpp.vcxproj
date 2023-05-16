@@ -152,6 +152,7 @@
     <ClCompile Include="iostream.cpp" />
     <ClCompile Include="source.cpp" />
     <ClCompile Include="tasks\general\string.cpp" />
+    <ClCompile Include="tasks\ravesli\games\cards.cpp" />
     <ClCompile Include="tasks\ravesli\tower.cpp" />
   </ItemGroup>
   <ItemGroup>

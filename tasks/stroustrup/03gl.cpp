@@ -1,21 +1,4 @@
-#include <iostream>
-#include <Windows.h>
-#include <string>
-#include <array>
-#include <vector>
-#include <algorithm>
-#include <cstdlib>
-#include <ctime>
-#include <cmath>
-
-
-
-
-int main()
-{
-	setlocale(LC_ALL, "Russian");
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+/*
 	std::cout << "Enter three numbers: ";
 	int a, b, c;
 	std::cin >> a >> b >> c;
@@ -32,11 +15,4 @@ int main()
 	else if(b >= c && c >= a)
 		std::cout << b << "," << c << "," << a << std::endl;
 
-	
-
-	return 0;
-}
-
-
-
-
+*/

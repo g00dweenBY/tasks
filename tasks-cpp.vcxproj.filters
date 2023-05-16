@@ -99,6 +99,9 @@
     <ClCompile Include="tasks\ravesli\06gl\tasks.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="tasks\ravesli\games\cards.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">
