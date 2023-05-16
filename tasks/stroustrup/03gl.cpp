@@ -24,4 +24,20 @@
 	else
 		std::cout << "NUmber " << num << " is add" << std::endl;
 
+			std::cout << "Enter a operator(+, -, *, /, %): ";
+	char opr;
+	std::cin >> opr;
+	std::cout << "Enter two numbers: ";
+	int a, b;
+	std::cin >> a >> b;
+	if (opr == '+')
+		std::cout << a << " + " << b << " = " << a + b << std::endl;
+	else if(opr == '-')
+		std::cout << a << " - " << b << " = " << a - b << std::endl;
+	else if(opr == '*')
+		std::cout << a << " * " << b << " = " << a * b << std::endl;
+	else if(opr == '/')
+		std::cout << a << " / " << b << " = " << a / b << std::endl;
+	else if(opr == '%')
+		std::cout << a << " % " << b << " = " << a % b << std::endl;
 */
