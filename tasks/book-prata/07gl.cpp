@@ -12,4 +12,62 @@
 		double harmonicMean = 2.0 * a * b / (a + b);
 		std::cout << "harmonicMean = " << harmonicMean << std::endl;
 	}
+	======================================================================
+
+	======================================================================
+
+	void getInput(std::vector<int>& scores) {
+	std::cout << "Введите результаты игры в гольф (максимум 10), для завершения введите -1:\n";
+
+	int score;
+	for (int i = 0; i < 10; ++i) {
+		std::cout << "Результат " << scores.size() + 1 << ": ";
+		std::cin >> score;
+
+		if (score == -1) {
+			break;
+		}
+
+		scores.push_back(score);
+	}
+}
+
+void displayScores(const std::vector<int>& scores) {
+	std::cout << "Результаты игры в гольф: ";
+	for (int score : scores) {
+		std::cout << score << " ";
+	}
+	std::cout << std::endl;
+}
+
+double calculateAverage(const std::vector<int>& scores) {
+	int sum = 0;
+	for (int score : scores) {
+		sum += score;
+	}
+
+	return static_cast<double>(sum) / scores.size();
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	 std::vector<int> scores;
+	getInput(scores);
+	displayScores(scores);
+
+	if (!scores.empty()) {
+		double average = calculateAverage(scores);
+		std::cout << "Среднее значение: " << average << std::endl;
+	} else {
+		std::cout << "Нет результатов игры." << std::endl;
+	}
+
+	return 0;
+}
+
+	======================================================================
 */
