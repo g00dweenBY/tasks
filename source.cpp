@@ -90,6 +90,14 @@ double calculateAverage(const std::vector<int>& scores) {
 }
 */
 
+int factorial(int num)
+{
+	if (num == 0)
+		return 1;
+
+	return num * factorial(num - 1);
+}
+
 
 
 int main()
@@ -97,7 +105,13 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+	std::cout << "¬ведите значение дл€ вычислени€ его факториала: ";
+	int num;
+	std::cin >> num;
+	
+	int res = factorial(num);
 
+	std::cout << "!" << num << " = " << res << std::endl;
 
 	return 0;
 }

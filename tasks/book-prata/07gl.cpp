@@ -92,5 +92,30 @@ float correctBoxVolume(Box* box)
 	box->volume = box->height * box->width * box->length;
 	return box->volume;
 }
+
+Box box = { "Box Size", 15.4, 8.8, 4.4, 12 };
+
+	printBox(box);
+
+	std::cout << "corect box volume : " << box.height << " * " << box.width << " * " <<
+	box.length << " = " << correctBoxVolume(&box);
+	======================================================================
+
+	======================================================================
+	int factorial(int num)
+{
+	if (num == 0)
+		return 1;
+
+	return num * factorial(num - 1);
+}
+
+	std::cout << "¬ведите значение дл€ вычислени€ его факториала: ";
+	int num;
+	std::cin >> num;
+
+	int res = factorial(num);
+
+	std::cout << "!" << num << " = " << res << std::endl;
 	======================================================================
 */
