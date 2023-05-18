@@ -69,5 +69,28 @@ int main()
 	return 0;
 }
 
+
+struct Box {
+	char maker[40];
+	float height;
+	float width;
+	float length;
+	float volume;
+};
+
+void printBox(Box box)
+{
+	std::cout << "Box maker = " << box.maker << '\n';
+	std::cout << "Box height = " << box.height << '\n';
+	std::cout << "Box width = " << box.width << '\n';
+	std::cout << "Box length = " << box.length << '\n';
+	std::cout << "Box volume = " << box.volume << '\n';
+}
+
+float correctBoxVolume(Box* box)
+{
+	box->volume = box->height * box->width * box->length;
+	return box->volume;
+}
 	======================================================================
 */

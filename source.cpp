@@ -54,7 +54,7 @@ const char* f2(const Aplicant* a1, const Aplicant* a2);
 
 typedef void(*f1_ptr)(Aplicant*);
 typedef const char* (*f2_ptr)(const Aplicant* p1, const Aplicant* p2);
-*/
+
 
 void getInput(std::vector<int>& scores) {
 	std::cout << "Введите результаты игры в гольф (максимум 10), для завершения введите -1:\n";
@@ -88,6 +88,9 @@ double calculateAverage(const std::vector<int>& scores) {
 
 	return static_cast<double>(sum) / scores.size();
 }
+*/
+
+
 
 int main()
 {
@@ -95,17 +98,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	 std::vector<int> scores;
-    getInput(scores);
-    displayScores(scores);
 
-    if (!scores.empty()) {
-        double average = calculateAverage(scores);
-        std::cout << "Среднее значение: " << average << std::endl;
-    } else {
-        std::cout << "Нет результатов игры." << std::endl;
-    }
-	
 	return 0;
 }
 
