@@ -90,14 +90,17 @@ double calculateAverage(const std::vector<int>& scores) {
 }
 */
 
-int factorial(int num)
+void fillArray(std::vector<double>&arr, int length)
 {
-	if (num == 0)
-		return 1;
-
-	return num * factorial(num - 1);
+	std::cout << "Enter a array numbers:\n";
+	double value;
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << "Enter a number #" << i + 1 << " : ";
+		std::cin >> value;
+		arr.push_back(value);
+	}
 }
-
 
 
 int main()
@@ -105,14 +108,11 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	std::cout << "¬ведите значение дл€ вычислени€ его факториала: ";
-	int num;
-	std::cin >> num;
-	
-	int res = factorial(num);
-
-	std::cout << "!" << num << " = " << res << std::endl;
-
+	std::vector<double> arr;
+	std::cout << "enter a arrow length: ";
+	int length;
+	std::cin >> length;
+	fillArray(arr, length);
 	return 0;
 }
 
