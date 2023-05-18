@@ -102,6 +102,28 @@ void fillArray(std::vector<double>&arr, int length)
 	}
 }
 
+void showArray(std::vector<double> &arr, int length)
+{
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << "Ёлемент под индексом " << i << " = " << arr[i] << std::endl;
+	}
+}
+void reverseArray(std::vector<double> &arr, int length)
+{
+	int start = 0;
+	int end = length - 1;
+	while (start < end)
+	{
+		double temp = arr[start];
+		arr[start] = arr[end];
+		arr[end] = temp;
+
+		++start;
+		--end;
+	}
+}
+
 
 int main()
 {
@@ -113,6 +135,10 @@ int main()
 	int length;
 	std::cin >> length;
 	fillArray(arr, length);
+	showArray(arr, length);
+	reverseArray(arr, length);
+	std::cout << "------------------------------------------------" << std::endl;
+	showArray(arr, length);
 	return 0;
 }
 
