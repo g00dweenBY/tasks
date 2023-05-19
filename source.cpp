@@ -130,6 +130,7 @@ int main()
 	{
 		for (int i = 0; i < 4; ++i)
 			std::cout << "Correct answer: " << calculate(first, second, pf[i]) << std::endl;
+		std::cout << "Enter a two numbers(double): ";
 	}
 
 
