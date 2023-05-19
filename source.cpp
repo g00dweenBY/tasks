@@ -127,7 +127,7 @@ int main()
 	while (std::cin >> first >> second)
 	{
 		int choice;
-		std::cout << "Enter a choice: 1 = add, 2 = diff, 3 = multiply, 4 = division: ";
+		std::cout << "Enter a choice: 1 = add, 2 = diff, 3 = multiply, 4 = division (q = quit): " ;
 
 		while (std::cin >> choice)
 		{
@@ -143,6 +143,7 @@ int main()
 				std::cout << "Division " << first << " and " << second << " = " << calculate(first, second, division) << std::endl; break;
 			default: std::cout << "Uncorrect choice, please enter correct choice:  1, 2, 3, 4: "; continue;
 			}
+			std::cout << "Enter two numbers (double): "; break;
 		}
 	}
 
