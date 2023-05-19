@@ -166,4 +166,58 @@ void reverseArray(std::vector<double> &arr, int length)
 
 
 	======================================================================
+
+
+	======================================================================
+double calculate(double a, double b, double (*func)(double c, double d))
+{
+	return func(a, b);
+}
+
+double add(double x, double y)
+{
+	return x + y;
+}
+
+double diff(double x, double y)
+{
+	return x - y;
+}
+
+double multiply(double x, double y)
+{
+	return x * y;
+}
+
+double division(double x, double y)
+{
+	return x / y;
+}
+
+
+	std::cout << "Enter a two numbers(double): ";
+	double first, second;
+	while (std::cin >> first >> second)
+	{
+		int choice;
+		std::cout << "Enter a choice: 1 = add, 2 = diff, 3 = multiply, 4 = division (q = quit): " ;
+
+		while (std::cin >> choice)
+		{
+			switch (choice)
+			{
+			case 1:
+				std::cout << "Add " << first << " and " << second << " = " << calculate(first, second, add) << std::endl; break;
+			case 2:
+				std::cout << "Diff " << first << " and " << second << " = " << calculate(first, second, diff) << std::endl; break;
+			case 3:
+				std::cout << "Multiply " << first << " and " << second << " = " << calculate(first, second, multiply) << std::endl; break;
+			case 4:
+				std::cout << "Division " << first << " and " << second << " = " << calculate(first, second, division) << std::endl; break;
+			default: std::cout << "Uncorrect choice, please enter correct choice:  1, 2, 3, 4: "; continue;
+			}
+			std::cout << "Enter two numbers (double): "; break;
+		}
+	}
+	======================================================================
 */

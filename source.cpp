@@ -122,30 +122,16 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+	double (*pf[4])(double, double) { add, diff, multiply, division };
+
 	std::cout << "Enter a two numbers(double): ";
 	double first, second;
 	while (std::cin >> first >> second)
 	{
-		int choice;
-		std::cout << "Enter a choice: 1 = add, 2 = diff, 3 = multiply, 4 = division (q = quit): " ;
-
-		while (std::cin >> choice)
-		{
-			switch (choice)
-			{
-			case 1:
-				std::cout << "Add " << first << " and " << second << " = " << calculate(first, second, add) << std::endl; break;
-			case 2:
-				std::cout << "Diff " << first << " and " << second << " = " << calculate(first, second, diff) << std::endl; break;
-			case 3:
-				std::cout << "Multiply " << first << " and " << second << " = " << calculate(first, second, multiply) << std::endl; break;
-			case 4:
-				std::cout << "Division " << first << " and " << second << " = " << calculate(first, second, division) << std::endl; break;
-			default: std::cout << "Uncorrect choice, please enter correct choice:  1, 2, 3, 4: "; continue;
-			}
-			std::cout << "Enter two numbers (double): "; break;
-		}
+		for (int i = 0; i < 4; ++i)
+			std::cout << "Correct answer: " << calculate(first, second, pf[i]) << std::endl;
 	}
+
 
 	return 0;
 }
