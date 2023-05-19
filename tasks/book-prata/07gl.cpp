@@ -118,4 +118,52 @@ Box box = { "Box Size", 15.4, 8.8, 4.4, 12 };
 
 	std::cout << "!" << num << " = " << res << std::endl;
 	======================================================================
+
+	======================================================================
+
+	void fillArray(std::vector<double>&arr, int length)
+{
+	std::cout << "Enter a array numbers:\n";
+	double value;
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << "Enter a number #" << i + 1 << " : ";
+		std::cin >> value;
+		arr.push_back(value);
+	}
+}
+
+void showArray(std::vector<double> &arr, int length)
+{
+	for (int i = 0; i < length; ++i)
+	{
+		std::cout << "Ёлемент под индексом " << i << " = " << arr[i] << std::endl;
+	}
+}
+void reverseArray(std::vector<double> &arr, int length)
+{
+	int start = 0;
+	int end = length - 1;
+	while (start < end)
+	{
+		double temp = arr[start];
+		arr[start] = arr[end];
+		arr[end] = temp;
+
+		++start;
+		--end;
+	}
+}
+	std::vector<double> arr;
+	std::cout << "enter a arrow length: ";
+	int length;
+	std::cin >> length;
+	fillArray(arr, length);
+	showArray(arr, length);
+	reverseArray(arr, length);
+	std::cout << "------------------------------------------------" << std::endl;
+	showArray(arr, length);
+
+
+	======================================================================
 */

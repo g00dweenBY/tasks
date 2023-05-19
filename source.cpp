@@ -90,39 +90,21 @@ double calculateAverage(const std::vector<int>& scores) {
 }
 */
 
-void fillArray(std::vector<double>&arr, int length)
+double calculate(double a, double b, double (*func)(double c, double d))
 {
-	std::cout << "Enter a array numbers:\n";
-	double value;
-	for (int i = 0; i < length; ++i)
-	{
-		std::cout << "Enter a number #" << i + 1 << " : ";
-		std::cin >> value;
-		arr.push_back(value);
-	}
+	return func(a, b);
 }
 
-void showArray(std::vector<double> &arr, int length)
+double add(double x, double y)
 {
-	for (int i = 0; i < length; ++i)
-	{
-		std::cout << "Ёлемент под индексом " << i << " = " << arr[i] << std::endl;
-	}
+	return x + y;
 }
-void reverseArray(std::vector<double> &arr, int length)
-{
-	int start = 0;
-	int end = length - 1;
-	while (start < end)
-	{
-		double temp = arr[start];
-		arr[start] = arr[end];
-		arr[end] = temp;
 
-		++start;
-		--end;
-	}
+double diff(double x, double y)
+{
+	return x - y;
 }
+
 
 
 int main()
@@ -130,15 +112,13 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	std::vector<double> arr;
-	std::cout << "enter a arrow length: ";
-	int length;
-	std::cin >> length;
-	fillArray(arr, length);
-	showArray(arr, length);
-	reverseArray(arr, length);
-	std::cout << "------------------------------------------------" << std::endl;
-	showArray(arr, length);
+	std::cout << "Enter a two numbers(double): ";
+	double first, second;
+	while (std::cin >> first >> second)
+	{
+		std::cout << "Answer add two numbers: " << calculate(first, second, add) << std::endl;
+	}
+
 	return 0;
 }
 
