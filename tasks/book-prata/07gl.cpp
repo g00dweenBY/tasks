@@ -219,5 +219,17 @@ double division(double x, double y)
 			std::cout << "Enter two numbers (double): "; break;
 		}
 	}
+
+	------------------array pointers for functrion -----------------------------------------
+	double (*pf[4])(double, double) { add, diff, multiply, division };
+
+	std::cout << "Enter a two numbers(double): ";
+	double first, second;
+	while (std::cin >> first >> second)
+	{
+		for (int i = 0; i < 4; ++i)
+			std::cout << "Correct answer: " << calculate(first, second, pf[i]) << std::endl;
+		std::cout << "Enter a two numbers(double): ";
+	}
 	======================================================================
 */

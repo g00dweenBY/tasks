@@ -1,20 +1,8 @@
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-#include <Windows.h>
-#include <string>
-#include <array>
-#include <vector>
-#include <algorithm>
-#include <ctime>
-#include <cmath>
-#include <cctype>
-
 /*
 * std::string version1(const std::string& s1, const std::string& s2);
 const std::string& version2(std::string& s1, const std::string& s2);
 const std::string& version3(std::string& s1, const std::string& s2);
-* 
+*
 std::string version1(const std::string& s1, const std::string& s2)
 {
 	std::string temp;
@@ -355,7 +343,7 @@ void iqoute(std::string t)
 	std::cout << "string = " << t << std::endl;
 }
 
-		
+
 	iqoute(2);
 	iqoute(32.89);
 	iqoute("Dmitry");
@@ -389,28 +377,3 @@ Box swap(Box &a, Box &b)
 }
 
 */
-
-
-
-
-
-
-int main()
-{
-	setlocale(LC_ALL, "Russian");
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	
-
-
-
-	return 0;
-}
-
-
-
-
-
-
-
-
