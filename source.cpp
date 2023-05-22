@@ -394,14 +394,12 @@ Box swap(Box &a, Box &b)
 
 
 
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	
-
 
 
 	return 0;
