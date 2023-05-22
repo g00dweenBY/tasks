@@ -141,6 +141,7 @@
     <ClCompile Include="tasks\book-prata\05gl.cpp" />
     <ClCompile Include="add.cpp" />
     <ClCompile Include="tasks\book-prata\07gl.cpp" />
+    <ClCompile Include="tasks\book-prata\08gl.cpp" />
     <ClCompile Include="tasks\book-prata\all-examples.cpp" />
     <ClCompile Include="tasks\general\algorithms.cpp" />
     <ClCompile Include="tasks\general\arithmetic.cpp" />

@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <Windows.h>
 #include <string>
+#include <cstring>
 #include <array>
 #include <vector>
 #include <algorithm>
@@ -391,8 +392,21 @@ Box swap(Box &a, Box &b)
 */
 
 
+struct CandyBar
+{
+	std::string boxName;
+	double width;
+	int quantityCalories;
+};
 
 
+void printCandyBar(const CandyBar& bar);
+void setValuesCandyBar(CandyBar& bar, const std::string box = "Default box", double w = 25.5, int q = 5)
+{
+	bar.boxName = box;
+	bar.width = w;
+	bar.quantityCalories = q;
+}
 
 int main()
 {
@@ -400,11 +414,21 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	
+	CandyBar bar;
 
+	setValuesCandyBar(bar, "don't default");
+	printCandyBar(bar);
 
 	return 0;
 }
 
+
+void printCandyBar(const CandyBar& bar)
+{
+	std::cout << "name: " << bar.boxName << std::endl;
+	std::cout << "width: " << bar.width << std::endl;
+	std::cout << "Quantity of Calories: " << bar.quantityCalories << std::endl;
+}
 
 
 
