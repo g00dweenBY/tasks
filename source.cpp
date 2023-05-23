@@ -11,19 +11,10 @@
 #include <cmath>
 #include <cctype>
 
+template<typename T>
+T maxN(std::vector<T> ar, int count);
 
-template <typename T>
-
-T max5(std::array<T, 5> arr)
-{
-	T result = 0;
-	for (int i = 0; i < 5; ++i)
-	{
-		if (arr[i] > result)
-			result = arr[i];
-	}
-	return result;
-}
+const char* maxN(const char* ar[], int count);
 
 int main()
 {
@@ -31,14 +22,47 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	std::array<double, 5> arDouble = { 5, 24, 5.8, 24.2, 15 };
-	std::array<int, 5> arInt = { 55, 44, 32, 174, 8 };
+	std::vector<int> arInt = { 22,32,44,55,78 };
+	std::vector<double> arDouble = { 2.48, 3.96, 5.8 };
+	std::cout << "Max number in array int: " << maxN(arInt, 4) << '\n';
+	std::cout << "Max number in array double: " << maxN(arDouble, 3) << '\n';
 
-	std::cout << "Max element in array double = " << max5(arDouble) << std::endl;
-	std::cout << "Max element in array int = " << max5(arInt) << std::endl;
 
+	const char* str[] = {
+		"Hello",
+		"World",
+		"This is a long string",
+		"Short",
+		"Testing",
+	};
+	int count = sizeof(str) / sizeof(str[0]);
+
+	const char* longest = maxN(str, count);
+	std::cout << "longest string: " << &longest << std::endl;
 	return 0;
 }
+
+
+template<typename T>
+T maxN(std::vector<T> ar, int count)
+{
+	T result = 0;
+	for (int i = 0; i < count; ++i)
+		result = ar[i];
+	return result;
+}
+const char* maxN(const char* ar[], int count)
+{
+	const char* str = ar[0];
+	for (int i = 1; i < count; ++i)
+	{
+		if (strlen(ar[i]) > strlen(str))
+			str = ar[i];
+	}
+	return str;
+}
+
+
 
 
 
