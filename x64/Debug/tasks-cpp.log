@@ -1,4 +1,5 @@
 ﻿D:\VISUAL\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1101,5): warning MSB8027: два или более файлов с именем 03gl.cpp выводят результаты в одно и то же расположение. Это может стать причиной неверного результата сборки.  Включенные файлы — tasks\book-prata\03gl.cpp, tasks\stroustrup\03gl.cpp.
   source.cpp
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(18,19): warning C4244: =: преобразование "int" в "char", возможна потеря данных
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(31,7): warning C4189: testing: локальная переменная инициализирована, но не использована
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(29,10): warning C4101: beany: неиспользованная локальная переменная
   tasks-cpp.vcxproj -> D:\Work\cpp\cpp-study\tasks-cpp\x64\Debug\tasks-cpp.exe

@@ -11,37 +11,48 @@
 #include <cmath>
 #include <cctype>
 
-std::string toUpperString(std::string& str)
+
+struct Stringy
 {
-	std::string res = str;
-	for (char& c : res)
-		c = std::toupper(c);
-	return res;
-}
+	std::string str;
+	int ct;
+};
+void show(const std::string str);
+void show(const std::string str, int count);
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	std::cout << "Enter a string (q to quit) :";
-	std::string str;
+
+	Stringy beany;
+
+	char testing[] = "Something text what it used to be.";
 	
-	while (std::cin >> str)
-	{
-		if (str == "q")
-		{
-			std::cout << "Bye";
-			break;
-		}
-		std::cout << toUpperString(str) << "\n";
 
-		std::cout << "Next string (q to quit): ";
-	}
-
+	show("hello", 5);
+	show("Bye!");
 
 	return 0;
 }
+
+void show(const std::string str)
+{
+	std::cout << str << '\n';
+}
+
+void show(const std::string str, int count)
+{
+	for(int i = 0; i < count; ++i)
+		std::cout << "String #" << i + 1  << ": " << str << '\n';
+}
+
+void set(Stringy& strc, std::string str)
+{
+	strc.str = str;
+}
+
 
 
 
