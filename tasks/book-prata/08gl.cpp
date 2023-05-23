@@ -57,4 +57,42 @@ void printCandyBar(const CandyBar& bar)
 	std::cout << "Quantity of Calories: " << bar.quantityCalories << std::endl;
 }
 ====================================================================
+
+====================================================================
+
+
+std::string toUpperString(std::string& str)
+{
+	std::string res = str;
+	for (char& c : res)
+		c = std::toupper(c);
+	return res;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	std::cout << "Enter a string (q to quit) :";
+	std::string str;
+
+	while (std::cin >> str)
+	{
+		if (str == "q")
+		{
+			std::cout << "Bye";
+			break;
+		}
+		std::cout << toUpperString(str) << "\n";
+
+		std::cout << "Next string (q to quit): ";
+	}
+
+
+	return 0;
+}
+
+
+====================================================================
 */
