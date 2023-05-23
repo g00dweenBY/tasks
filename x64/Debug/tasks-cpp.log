@@ -1,10 +1,3 @@
 ﻿D:\VISUAL\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1101,5): warning MSB8027: два или более файлов с именем 03gl.cpp выводят результаты в одно и то же расположение. Это может стать причиной неверного результата сборки.  Включенные файлы — tasks\book-prata\03gl.cpp, tasks\stroustrup\03gl.cpp.
   source.cpp
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(48): warning C4365: аргумент: преобразование "int" в "const unsigned __int64", несоответствие типов со знаком и без
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(27,59): message : выполняется компиляция ссылки на экземпляр шаблон функции "T maxN<int>(std::vector<int,std::allocator<int>>,int)"
-          with
-          [
-              T=int
-          ]
-x64\Debug\03gl.obj : warning LNK4042: объект указан более одного раза; лишние не учитываются
   tasks-cpp.vcxproj -> D:\Work\cpp\cpp-study\tasks-cpp\x64\Debug\tasks-cpp.exe

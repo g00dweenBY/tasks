@@ -226,4 +226,96 @@ const char* maxN(const char* ar[], int count)
 }
 
 ====================================================================
+
+
+
+====================================================================
+
+
+struct Debts
+{
+	std::string name;
+	double amount;
+};
+
+template <typename T>
+void showArray(T arr[], int n);
+
+template <typename T>
+void showArray(T* arr[], int n);
+
+template<typename T>
+double sumArray(T arr[], int n);
+
+template<typename T>
+double sumArray(T* arr[], int n);
+// =================================================================================
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	int things[6] = { 13,31,103,301,310,130 };
+	struct Debts mr_E[3] =
+	{
+		{"Ima Wolfe", 2400.0},
+		{"Ura Foxe", 1200.0},
+		{"Iby Stout", 1800.0}
+	};
+
+	double* pd[3];
+
+	for (int i = 0; i < 3; ++i)
+		pd[i] = &mr_E[i].amount;
+	std::cout << "Listing mr. E's counts of things:\n";
+
+	showArray(things, 6);
+	std::cout << "Sum = " << sumArray(things, 6) << '\n';
+
+	std::cout << "lising mr. E's debts:\n";
+	showArray(pd, 3);
+	std::cout << "Sum = " << sumArray(pd, 3) << '\n';
+
+	return 0;
+}
+// =================================================================================
+
+template <typename T>
+void showArray(T arr[], int n)
+{
+	std::cout << "template A\n";
+	for (int i = 0; i < n; ++i)
+		std::cout << arr[i] << ' ';
+	std::cout << std::endl;
+}
+
+template <typename T>
+void showArray(T* arr[], int n)
+{
+	std::cout << "template B\n";
+	for (int i = 0; i < n; ++i)
+		std::cout << *arr[i] << ' ';
+	std::cout << std::endl;
+}
+
+template<typename T>
+double sumArray(T arr[], int n)
+{
+	double result = 0;
+	for (int i = 0; i < n; ++i)
+		result += arr[i];
+	return result;
+}
+
+template<typename T>
+double sumArray(T* arr[], int n)
+{
+	double result = 0;
+	for (int i = 0; i < n; ++i)
+		result += *arr[i];
+	return result;
+}
+
+====================================================================
 */
