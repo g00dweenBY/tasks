@@ -12,13 +12,18 @@
 #include <cctype>
 
 
-struct Stringy
+template <typename T>
+
+T max5(std::array<T, 5> arr)
 {
-	std::string str;
-	int ct;
-};
-void show(const std::string str);
-void show(const std::string str, int count);
+	T result = 0;
+	for (int i = 0; i < 5; ++i)
+	{
+		if (arr[i] > result)
+			result = arr[i];
+	}
+	return result;
+}
 
 int main()
 {
@@ -26,32 +31,16 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	Stringy beany;
+	std::array<double, 5> arDouble = { 5, 24, 5.8, 24.2, 15 };
+	std::array<int, 5> arInt = { 55, 44, 32, 174, 8 };
 
-	char testing[] = "Something text what it used to be.";
-	
-
-	show("hello", 5);
-	show("Bye!");
+	std::cout << "Max element in array double = " << max5(arDouble) << std::endl;
+	std::cout << "Max element in array int = " << max5(arInt) << std::endl;
 
 	return 0;
 }
 
-void show(const std::string str)
-{
-	std::cout << str << '\n';
-}
 
-void show(const std::string str, int count)
-{
-	for(int i = 0; i < count; ++i)
-		std::cout << "String #" << i + 1  << ": " << str << '\n';
-}
-
-void set(Stringy& strc, std::string str)
-{
-	strc.str = str;
-}
 
 
 
