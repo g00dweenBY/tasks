@@ -133,6 +133,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="file1.cpp" />
+    <ClCompile Include="namesp.cpp" />
     <ClCompile Include="tasks\book-prata\06gl.cpp" />
     <ClCompile Include="hard.cpp" />
     <ClCompile Include="tasks\book-prata\02gl.cpp" />
@@ -148,6 +150,7 @@
     <ClCompile Include="tasks\book-prata\branching.cpp" />
     <ClCompile Include="tasks\ravesli\06gl\sortStringArray.cpp" />
     <ClCompile Include="tasks\ravesli\06gl\tasks.cpp" />
+    <ClCompile Include="tasks\ravesli\07gl\07glR.cpp" />
     <ClCompile Include="tasks\ravesli\cycle.cpp" />
     <ClCompile Include="tasks\ravesli\escape.cpp" />
     <ClCompile Include="tasks\ravesli\game-hi-lo.cpp" />
@@ -157,12 +160,12 @@
     <ClCompile Include="tasks\general\string.cpp" />
     <ClCompile Include="tasks\ravesli\games\cards.cpp" />
     <ClCompile Include="tasks\ravesli\tower.cpp" />
-    <ClCompile Include="tasks\stroustrup\03gl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h" />
     <ClInclude Include="boo.h" />
     <ClInclude Include="constants.h" />
+    <ClInclude Include="namesp.h" />
     <ClInclude Include="doo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

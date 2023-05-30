@@ -376,4 +376,215 @@ Box swap(Box &a, Box &b)
 		return b;
 }
 
+=====================================================================================================
+	double* pd1, * pd2;
+	int i;
+
+	std::cout << "Calling new and placement new:\n";
+	pd1 = new double[N]; //использование кучи
+	pd2 = new (buffer) double[N]; // использование массива buffer
+
+	for (i = 0; i < N; ++i)
+		pd2[i] = pd1[i] = 1000 + 20.0 * i;
+	std::cout << "Memory address:\n" << " heap: " << pd1
+		<< " static: " << (void*)buffer << std::endl;
+	std::cout << "Memory contents:\n";
+	for (i = 0; i < N; ++i)
+	{
+		std::cout << pd1[i] << " at " << &pd1[i] << "; ";
+		std::cout << pd2[i] << " at " << &pd2[i] << std::endl;
+	}
+	std::cout << "\nCalling new and placement new a second time:\n";
+	double* pd3, *pd4;
+	pd3 = new double[N];
+	pd4 = new (buffer) double[N];
+	for (i = 0; i < N; ++i)
+		pd4[i] = pd3[i] = 1000 + 40.0 * i;
+	std::cout << "Memory contents:\n";
+	for (i = 0; i < N; ++i)
+	{
+		std::cout << pd3[i] << " at " << &pd3[i] << "; ";
+		std::cout << pd3[i] << " at " << &pd4[i] << std::endl;
+	}
+
+	std::cout << "\nCalling new and placement new a third time:\n";
+	delete[] pd1;
+	pd1 = new double[N];
+	pd2 = new (buffer + N * sizeof(double)) double[N];
+	for (i = 0; i < N; ++i)
+		pd2[i] = pd1[i] = 1000 + 60.0 * i;
+	std::cout << "Memory contents:\n";
+	for (i = 0; i < N; ++i)
+	{
+		std::cout << pd1[i] << " at " << &pd1[i] << "; ";
+		std::cout << pd2[i] << " at " << &pd2[i] << std::endl;
+	}
+
+	delete[] pd1;
+	delete[] pd2;
+
+=====================================================================================================
+
+=====================================================================================================
+
+	const int BUF = 512;
+	const int N = 5;
+
+	char buffer[BUF];
+
+
+	double* pd1, * pd2;
+	int i;
+
+	std::cout << "Calling new and placement new:\n";
+	pd1 = new double[N]; //использование кучи
+	pd2 = new (buffer) double[N]; // использование массива buffer
+
+	for (i = 0; i < N; ++i)
+		pd2[i] = pd1[i] = 1000 + 20.0 * i;
+	std::cout << "Memory address:\n" << " heap: " << pd1
+		<< " static: " << (void*)buffer << std::endl;
+	std::cout << "Memory contents:\n";
+	for (i = 0; i < N; ++i)
+	{
+		std::cout << pd1[i] << " at " << &pd1[i] << "; ";
+		std::cout << pd2[i] << " at " << &pd2[i] << std::endl;
+	}
+	std::cout << "\nCalling new and placement new a second time:\n";
+	double* pd3, * pd4;
+	pd3 = new double[N];
+	pd4 = new (buffer) double[N];
+	for (i = 0; i < N; ++i)
+		pd4[i] = pd3[i] = 1000 + 40.0 * i;
+	std::cout << "Memory contents:\n";
+	for (i = 0; i < N; ++i)
+	{
+		std::cout << pd3[i] << " at " << &pd3[i] << "; ";
+		std::cout << pd3[i] << " at " << &pd4[i] << std::endl;
+	}
+
+	std::cout << "\nCalling new and placement new a third time:\n";
+	delete[] pd1;
+	pd1 = new double[N];
+	pd2 = new (buffer + N * sizeof(double)) double[N];
+	for (i = 0; i < N; ++i)
+		pd2[i] = pd1[i] = 1000 + 60.0 * i;
+	std::cout << "Memory contents:\n";
+	for (i = 0; i < N; ++i)
+	{
+		std::cout << pd1[i] << " at " << &pd1[i] << "; ";
+		std::cout << pd2[i] << " at " << &pd2[i] << std::endl;
+	}
+
+	delete[] pd1;
+	delete[] pd2;
+=====================================================================================================
+
+=====================================================================================================
+ ------------------header (namesp.h)
+ #include <string>
+
+
+namespace pers
+{
+	struct Person
+	{
+		std::string fname;
+		std::string lname;
+	};
+	void getPerson(Person&);
+	void showPerson(const Person&);
+}
+namespace debts
+{
+	using namespace pers;
+	struct Debt
+	{
+		Person name;
+		double amount;
+	};
+	void getDebt(Debt&);
+	void showDebt(const Debt&);
+	double sumDebts(const Debt ar[], int n);
+}
+------------------ /header
+
+#include <iostream>
+#include "namesp.h"
+
+namespace pers
+{
+	void getPerson(Person& rp)
+	{
+		std::cout << "Enter first name: ";
+		std::cin >> rp.fname;
+		std::cout << "Enter last name: ";
+		std::cin >> rp.lname;
+	}
+	void showPerson(const Person& rp)
+	{
+		std::cout << rp.lname << ", " << rp.fname;
+	}
+}
+
+namespace debts
+{
+	void getDebt(Debt& rd)
+	{
+		getPerson(rd.name);
+		std::cout << "Enter debt: ";
+		std::cin >> rd.amount;
+	}
+
+	void showDebt(const Debt& rd)
+	{
+		showPerson(rd.name);
+		std::cout << ": $" << rd.amount << std::endl;
+	}
+	double sumDebts(const Debt ar[], int n)
+	{
+		double total = 0;
+		for (int i = 0; i < n; ++i)
+			total += ar[i].amount;
+		return total;
+	}
+}
+
+
+
+void other(void);
+void another(void);
+
+void other(void)
+{
+	using namespace debts;
+	Person dg = { "Dmitry", "Simonov" };
+	showPerson(dg);
+	std::cout << std::endl;
+	Debt zippy[3];
+	int i;
+	for (i = 0; i < 3; ++i)
+		getDebt(zippy[i]);
+	std::cout << "Total debt: $" << sumDebts(zippy, 3) << std::endl;
+	return;
+}
+
+void another(void)
+{
+	using pers::Person;
+	Person collector = { "Nikita", "Radionov" };
+	pers::showPerson(collector);
+	std::cout << std::endl;
+}
+
+	using debts::Debt;
+	using::debts::showDebt;
+
+	Debt golf = { {"Roman", "Burmistrov"}, 120.0 };
+	showDebt(golf);
+	other();
+	another();
+
+=====================================================================================================
+
 */

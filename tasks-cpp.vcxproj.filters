@@ -102,9 +102,6 @@
     <ClCompile Include="tasks\ravesli\games\cards.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="tasks\stroustrup\03gl.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="tasks\book-prata\07gl.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -112,6 +109,15 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="tasks\book-prata\08gl.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="file1.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="namesp.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="tasks\ravesli\07gl\07glR.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -126,6 +132,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="doo.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="namesp.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
