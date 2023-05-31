@@ -64,9 +64,9 @@ int factorial(int number)
 		return 1;
 	return number * factorial(number - 1);
 }
-int calculateDigitSum(int num)
+/*int calculateDigitSum(int num)
 {
-	/*
+	
 	* -------------------iteration------------------
 	int sum = 0;
 
@@ -80,14 +80,42 @@ int calculateDigitSum(int num)
 		std::cout << "num = " << num << std::endl;
 	}
 	return sum;
-	*/
-	//--------------------recursion--------------------
+
+	/--------------------recursion--------------------
 	if (num < 10)
 		return num;
 	else
 		return calculateDigitSum(num / 10) + num % 10;
+	
+	
 }
+*/
 // =================================================================================
+
+/*
+	* while (num != 0)
+	{
+		if (num == 0)
+		{
+			std::cout << 1 << " ";
+			break;
+		}
+		if (num % 2 == 0)
+			std::cout << 0 << " ";
+		if (num % 2 == 1)
+			std::cout << 1 << " ";
+		num /= 2;
+
+	}
+	*/
+
+void convertationToBinary(int number)
+{
+	if (number == 0) return;
+	convertationToBinary(number / 2);
+	std::cout << number % 2 << " ";
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -96,7 +124,10 @@ int main()
 	std::cout << "Enter a your number: ";
 	int number;
 	std::cin >> number;
-	std::cout << "calculate digit sum number: " << number << " = " << calculateDigitSum(number) << std::endl;
+	std::cout << number << " binary convertation: \n";
+
+	convertationToBinary(number);
+
 
 	
 
