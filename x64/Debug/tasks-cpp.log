@@ -1,2 +1,3 @@
 ﻿  source.cpp
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(115,60): warning C4365: аргумент: преобразование "unsigned int" в "int", несоответствие типов со знаком и без
   tasks-cpp.vcxproj -> D:\Work\cpp\cpp-study\tasks-cpp\x64\Debug\tasks-cpp.exe

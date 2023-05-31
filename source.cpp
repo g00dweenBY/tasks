@@ -112,7 +112,7 @@ int factorial(int number)
 void convertationToBinary(int number)
 {
 	if (number == 0) return;
-	convertationToBinary(number / 2);
+	convertationToBinary(static_cast<unsigned int>(number) / 2);
 	std::cout << number % 2 << " ";
 }
 
