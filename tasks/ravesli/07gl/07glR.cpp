@@ -195,4 +195,37 @@ for (int i = 0; i < 13; ++i)
 
 =================================================================================================
 
+
+=================================================================================================
+int factorial(int number)
+{
+	if (number == 1 || number == 0)
+		return 1;
+	return number * factorial(number - 1);
+}
+int calculateDigitSum(int num)
+{
+	
+	 -------------------iteration------------------
+	int sum = 0;
+
+	while (num != 0)
+	{
+		int digit = num % 10;
+		std::cout << "digit = " << digit << std::endl;
+		sum += digit;
+		num /= 10;
+
+		std::cout << "num = " << num << std::endl;
+	}
+	return sum;
+	
+	--------------------recursion--------------------
+if (num < 10)
+	return num;
+else
+return calculateDigitSum(num / 10) + num % 10;
+}
+=================================================================================================
+
 */

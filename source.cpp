@@ -64,6 +64,29 @@ int factorial(int number)
 		return 1;
 	return number * factorial(number - 1);
 }
+int calculateDigitSum(int num)
+{
+	/*
+	* -------------------iteration------------------
+	int sum = 0;
+
+	while (num != 0)
+	{
+		int digit = num % 10;
+		std::cout << "digit = " << digit << std::endl;
+		sum += digit;
+		num /= 10;
+
+		std::cout << "num = " << num << std::endl;
+	}
+	return sum;
+	*/
+	//--------------------recursion--------------------
+	if (num < 10)
+		return num;
+	else
+		return calculateDigitSum(num / 10) + num % 10;
+}
 // =================================================================================
 int main()
 {
@@ -73,7 +96,7 @@ int main()
 	std::cout << "Enter a your number: ";
 	int number;
 	std::cin >> number;
-	std::cout << "factorial(!" << number << ") = " << factorial(number) << std::endl;
+	std::cout << "calculate digit sum number: " << number << " = " << calculateDigitSum(number) << std::endl;
 
 	
 
