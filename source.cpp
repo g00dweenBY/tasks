@@ -14,6 +14,7 @@
 #include <functional>
 #include "namesp.h"
 #include <new>
+#include <cstdarg>
 /*
 
 int fibonacci(int number)
@@ -109,11 +110,22 @@ int factorial(int number)
 	}
 	*/
 
-void convertationToBinary(int number)
+int binarySearch(int* array, int target, int min, int max)
 {
-	if (number == 0) return;
-	convertationToBinary(static_cast<unsigned int>(number) / 2);
-	std::cout << number % 2 << " ";
+	
+		if (min > max) return -1;
+		// ------ iteration variable ------
+		int mid = min + ((max - min) / 2); // избегание вероятности переполнения
+		if (target == array[mid]) return mid;
+		if (target > array[mid])
+		{
+			return binarySearch(array, target, mid + 1, max);
+		}
+		if (target < array[mid])
+		{
+			return binarySearch(array, target, min, mid - 1);
+
+		}
 }
 
 int main()
@@ -121,13 +133,19 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	std::cout << "Enter a your number: ";
-	int number;
-	std::cin >> number;
-	std::cout << number << " binary convertation: \n";
 
-	convertationToBinary(number);
+	std::cout << "Enter a number: ";
+	int x;
+	std::cin >> x;
 
+	int array[] = { 4, 7, 9, 13, 15, 19, 22, 24, 28, 33, 37, 41, 43, 47, 50 };
+
+	int index = binarySearch(array, x, 0, 14);
+
+	if (x == array[index])
+		std::cout << "Good! Your value " << x << " is on position " << index << " in array!\n";
+	else
+		std::cout << "Fail! Your value " << x << " isn't in array\n";
 
 	
 
