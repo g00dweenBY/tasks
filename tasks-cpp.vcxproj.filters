@@ -120,6 +120,9 @@
     <ClCompile Include="tasks\ravesli\07gl\07glR.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="tasks\ravesli\08gl-oop\08glR-OOP.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="add.h">

@@ -15,140 +15,55 @@
 #include "namesp.h"
 #include <new>
 #include <cstdarg>
-/*
 
-int fibonacci(int number)
+
+class Numbers
 {
-	if (number == 0)
-		return 0;
-	if (number == 1)
-		return 1;
-	return fibonacci(number - 1) + fibonacci(number - 2);
-}
-
-int fibonacciIteration(int n)
-{
-	if (n <= 0)
-		return 0;
-
-	int first = 0;
-	int second = 1;
-
-	for (int i = 2; i < n; ++i)
+	int m_a;
+	int m_b;
+	int m_c;
+public:
+	void setValues(int a, int b, int c)
 	{
-		int temp = first + second;
-		first = second;
-		second = temp;
-		std::cout << second << " ";
+		m_a = a;
+		m_b = b;
+		m_c = c;
 	}
-	return second;
-}
 
-
-for (int i = 0; i < 13; ++i)
-		std::cout << fibonacci(i) << " ";
-
-
-	std::cout << "\nFibonacci iteration method:\n";
-
-	int n;
-	std::cout << "Enter a number: ";
-	std::cin >> n;
-
-	int res = fibonacciIteration(n);
-	std::cout << "\nFibonacci(" << n << ") = " << res << std::endl;
-*/
-
-int factorial(int number)
-{
-	if (number == 1 || number == 0)
-		return 1;
-	return number * factorial(number - 1);
-}
-/*int calculateDigitSum(int num)
-{
-	
-	* -------------------iteration------------------
-	int sum = 0;
-
-	while (num != 0)
+	void print()
 	{
-		int digit = num % 10;
-		std::cout << "digit = " << digit << std::endl;
-		sum += digit;
-		num /= 10;
-
-		std::cout << "num = " << num << std::endl;
+		std::cout << "<" << m_a << ", " << m_b << ", " << m_c << ">";
 	}
-	return sum;
 
-	/--------------------recursion--------------------
-	if (num < 10)
-		return num;
-	else
-		return calculateDigitSum(num / 10) + num % 10;
-	
-	
-}
-*/
-// =================================================================================
-
-/*
-	* while (num != 0)
+	bool isEqual(const Numbers& d)
 	{
-		if (num == 0)
-		{
-			std::cout << 1 << " ";
-			break;
-		}
-		if (num % 2 == 0)
-			std::cout << 0 << " ";
-		if (num % 2 == 1)
-			std::cout << 1 << " ";
-		num /= 2;
-
+		return (m_a == d.m_a && m_b == d.m_b && m_c == d.m_c);
 	}
-	*/
+};
 
-int binarySearch(int* array, int target, int min, int max)
-{
-	
-		if (min > max) return -1;
-		// ------ iteration variable ------
-		int mid = min + ((max - min) / 2); // избегание вероятности переполнения
-		if (target == array[mid]) return mid;
-		if (target > array[mid])
-		{
-			return binarySearch(array, target, mid + 1, max);
-		}
-		if (target < array[mid])
-		{
-			return binarySearch(array, target, min, mid - 1);
-
-		}
-}
 
 int main()
 {
 	setlocale(LC_ALL, "Russian");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-
-	std::cout << "Enter a number: ";
-	int x;
-	std::cin >> x;
-
-	int array[] = { 4, 7, 9, 13, 15, 19, 22, 24, 28, 33, 37, 41, 43, 47, 50 };
-
-	int index = binarySearch(array, x, 0, 14);
-
-	if (x == array[index])
-		std::cout << "Good! Your value " << x << " is on position " << index << " in array!\n";
-	else
-		std::cout << "Fail! Your value " << x << " isn't in array\n";
-
 	
+	Numbers p1;
+	p1.setValues(3, 4, 5);
+	Numbers p2;
+	p2.setValues(3, 4, 5);
+	if (p1.isEqual(p2))
+		std::cout << "p1 and p2 are equal\n";
+	else
+		std::cout << "p1 and p2 are not equal\n";
+	Numbers p3;
+	p3.setValues(7, 8, 9);
 
+	if (p1.isEqual(p3))
+		std::cout << "p1 and p3 are equal\n";
+	else
+		std::cout << "p1 and p3 are not equal\n";
+	
 	return 0;
 }
 // =================================================================================

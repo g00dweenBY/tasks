@@ -228,4 +228,32 @@ return calculateDigitSum(num / 10) + num % 10;
 }
 =================================================================================================
 
+=================================================================================================
+int binarySearch(int* array, int target, int min, int max)
+{
+	int mid = min + ((max - min) / 2); // избегание вероятности переполнения
+		// ------ iteration ------
+	for(int i = 0; i < max; ++i)
+	{
+		if (target == array[mid]) return mid;
+		if (target > array[mid]) min = mid + 1;
+		if (target < array[mid]) max = mid - 1;
+	}
+		// ------ recursrion ------
+		if (min > max) return -1;
+
+
+		if (target == array[mid]) return mid;
+		if (target > array[mid])
+		{
+			return binarySearch(array, target, mid + 1, max);
+		}
+		if (target < array[mid])
+		{
+			return binarySearch(array, target, min, mid - 1);
+
+		}
+}
+=================================================================================================
+
 */

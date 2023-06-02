@@ -151,6 +151,7 @@
     <ClCompile Include="tasks\ravesli\06gl\sortStringArray.cpp" />
     <ClCompile Include="tasks\ravesli\06gl\tasks.cpp" />
     <ClCompile Include="tasks\ravesli\07gl\07glR.cpp" />
+    <ClCompile Include="tasks\ravesli\08gl-oop\08glR-OOP.cpp" />
     <ClCompile Include="tasks\ravesli\cycle.cpp" />
     <ClCompile Include="tasks\ravesli\escape.cpp" />
     <ClCompile Include="tasks\ravesli\game-hi-lo.cpp" />
