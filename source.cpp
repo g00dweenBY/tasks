@@ -17,38 +17,72 @@
 #include <cstdarg>
 #include <cassert>
 
-
-class Stack
+/*
+* ==================================================================================
+class Fraction
 {
 private:
-	int m_arr[10];
-	int m_next;
+	int m_numerator;
+	int m_denominator;
+
 public:
-	void reset()
+	Fraction(int numerator = 0, int denominator = 1)
 	{
-		m_next = 0;
-		for (int i = 0; i < 10; ++i)
-			m_arr[i] = 0;
+		assert(denominator != 0);
+		m_numerator = numerator;
+		m_denominator = denominator;
 	}
-	bool push(int value)
+
+	int getNumerator() { return m_numerator; }
+	int getDenominator() { return m_denominator; }
+	double getValue() { return static_cast<double>(m_numerator) / m_denominator; }
+};
+Fraction drob;
+
+	std::cout << drob.getNumerator() << "/" << drob.getDenominator() << '\n';
+
+	======================================================================================
+
+	======================================================================================
+	class A
+{
+public:
+	A() { std::cout << "A\n"; }
+};
+class B
+{
+private:
+	A m_a;
+
+public:
+	B() { std::cout << "B\n"; }
+};
+	B b;
+	======================================================================================
+*/
+
+class Ball
+{
+private:
+	std::string m_color;
+	double m_rad;
+public:
+	Ball(double radius)
 	{
-		if (m_next == 10)
-			return false;
-		m_arr[m_next++] = value;
-		return true;
+		m_color = "white";
+		m_rad = radius;
 	}
-	int pop()
+	Ball(const std::string& color = "red", double radius = 58.12)
 	{
-		assert(m_next > 0);
-		return m_arr[--m_next];
+		m_color = color;
+		m_rad = radius;
 	}
+
 	void print()
 	{
-		std::cout << "( ";
-		for (int i = 0; i < m_next; ++i)
-			std::cout << m_arr[i] << " ";
-		std::cout << ")\n";
+		std::cout << "color: " << m_color << "\nradius: " << m_rad << std::endl;
 	}
+		
 };
 
 
@@ -58,18 +92,20 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	
-	Stack stack;
-	stack.reset();
+	std::cout << "#1\n";
+	Ball b1;
+	b1.print();
 
-	stack.push(5);
-	stack.print();
+	std::cout << "#2\n";
+	Ball b2(44.8);
+	b2.print();
 
-	stack.push(44);
-	stack.push(22);
-	stack.push(33);
-	stack.print();
-	stack.pop();
-	stack.print();
+	std::cout << "#3\n";
+	Ball b3("black");
+	b3.print();
+	
+
+	
 	
 	
 	return 0;
