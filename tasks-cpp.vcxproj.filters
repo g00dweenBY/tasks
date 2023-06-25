@@ -137,7 +137,7 @@
     <ClInclude Include="doo.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="namesp.h">
+    <ClInclude Include="Date.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

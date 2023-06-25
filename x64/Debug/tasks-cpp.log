@@ -1,7 +1,7 @@
 ﻿  source.cpp
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(158,60): warning C4244: инициализация: преобразование "int" в "uint8_t", возможна потеря данных
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(158): warning C4365: инициализация: преобразование "int" в "uint8_t", несоответствие типов со знаком и без
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(158,72): warning C4244: инициализация: преобразование "int" в "uint8_t", возможна потеря данных
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(158,83): warning C4244: инициализация: преобразование "int" в "uint8_t", возможна потеря данных
-D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(158,95): warning C4244: инициализация: преобразование "int" в "uint8_t", возможна потеря данных
-  tasks-cpp.vcxproj -> D:\Work\cpp\cpp-study\tasks-cpp\x64\Debug\tasks-cpp.exe
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(23,10): error C2131: выражение не определяется константой
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(23,10): message : сбой вызван чтением переменной вне срока ее существования
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(23,10): message : см. использование "n"
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(26,12): warning C4552: ">>": результат выражения не используется
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(30,12): warning C4552: ">>": результат выражения не используется
+D:\Work\cpp\cpp-study\tasks-cpp\tasks-cpp\source.cpp(31,23): warning C4552: "<<": результат выражения не используется

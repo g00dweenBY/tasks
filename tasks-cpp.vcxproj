@@ -166,7 +166,7 @@
     <ClInclude Include="add.h" />
     <ClInclude Include="boo.h" />
     <ClInclude Include="constants.h" />
-    <ClInclude Include="namesp.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="doo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
